@@ -1,0 +1,57 @@
+These are the steps that need to be taken to recreate the webpage:
+
+The login credintials for SQL will need to be changed in several files.
+
+-----
+Create the following tables in MYSQL
+
+CREATE TABLE Pokemon
+(
+	pokemonID Int,
+	name varchar(255),
+	type1 varchar(255),
+	type2 varchar(255),
+	total Int,
+	HP Int,
+	attack Int,
+	defense Int,
+	sAttack Int,
+	sDefense Int,
+	speed Int,
+	searchName varchar(255),
+	evolveID Int
+	
+);
+
+CREATE TABLE TestParties
+(
+	userID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	pokemonID Int
+);
+
+CREATE TABLE TestUsers
+(
+	userID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	usename varchar(255)
+);
+
+-----
+
+The csv2sql.php file is used to move the pokemonData.csv to the Pokemon table in MYSQL.
+The csv2sql will need to be modified to get into your database.
+
+-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
